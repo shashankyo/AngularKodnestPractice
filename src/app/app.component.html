@@ -1,0 +1,103 @@
+<!-- {{title}}
+<h1>{{title}}</h1>
+<h1>{{name.length}}</h1>
+<h1>{{age}}</h1>
+<h1>{{isMarried}}</h1>
+<h1>{{name.length}}</h1>
+<h1>{{name}}</h1>
+<h1>{{name.toUpperCase()}}</h1>
+<h1>{{name.toLowerCase()}}</h1> -->
+<!-- string interpolation error -->
+<!-- <input type="text" 
+[disabled]={{boolValue1}}>
+<input type="text" 
+[disabled]={{boolValue2}}> -->
+
+<!-- Datatype or property binding approach -->
+<!-- <input type="text" 
+[disabled]=boolValue1>
+<input type="text" 
+[disabled]=boolValue2> -->
+
+<!-- style binding -->
+<!-- <h1 [style.color]="boolValue2?'blue':'red'">
+    Welcome to Style Binding</h1> -->
+<!-- 
+<h1 
+    [ngstyle]="ref">
+    Welcome to Style Binding</h1> -->
+
+    <!-- event binding -->
+
+<!-- <button (click)="myFun() ">button</button> -->
+
+<!-- Template reference -->
+<!-- <input type="text" #myInputVal>
+<button 
+(click)=
+"display(myInputVal.value)">button</button>
+
+{{name}} -->
+
+<!-- <h1>Welcome to two way binding</h1>
+<input type="text" 
+[(ngModel)]="name">
+<h1>{{name}}</h1> -->
+<!-- 
+<h1>{{name}}</h1>
+<h1>{{name | uppercase}}</h1>
+<h1>{{name | lowercase}}</h1>
+<h1>{{person | json}}</h1>
+<h1>{{d}}</h1>
+<h1>{{d | date:"medium"}}</h1>
+<h1>{{d | date:"short"}}</h1> -->
+
+<!-- Structural directives -->
+<!-- Approach 1 -->
+<!-- <h1 *ngIf="false">
+    Welcome to App Component
+</h1>
+
+<h1 *ngIf="true">
+    Welcome to Structural directives
+</h1> -->
+
+<!-- Approach 2 -->
+<!-- <h1 *ngIf="bool1">
+    Welcome to App Component
+</h1>
+
+<h1 *ngIf="bool2">
+    Welcome to Structural directives
+</h1> -->
+
+<!-- Approach 3 if else -->
+<!-- <h1 *ngIf="bool1">
+    Welcome to App Component
+</h1>
+
+<h1 *ngIf="bool2;else templatename">
+    Welcome to Structural directives
+</h1>
+
+<ng-template #templatename>Invalid Data</ng-template> -->
+<!-- 
+<div *ngFor="let data of name">
+    {{data}}
+</div> -->
+
+<!-- Switch statement -->
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'">
+        Red choice
+    </h1>
+    <h1 *ngSwitchCase="'blue'">
+        Blue choice
+    </h1> 
+    <h1 *ngSwitchCase="'pink'">
+        Pink choice
+    </h1> 
+    <h1 *ngSwitchDefault="'yellow'">
+        Default yellow choice
+    </h1>
+</div>
