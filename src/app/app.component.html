@@ -1,0 +1,35 @@
+<form [formGroup] = "form">
+  <div>
+    <label>username</label>
+    <input type="text" class="form-control" formControlName="name">
+  <div *ngIf="form.controls['name'].touched && form.controls['name'].invalid">
+    <small *ngIf="form.controls['name'].errors &&
+    form.controls['name'].errors['required']">Name is requireds</small>
+  
+    <small *ngIf="form.controls['name'].errors &&
+    form.controls['name'].errors['minlength']">User name should have minimum 4 characters</small>
+
+    <small *ngIf="form.controls['name'].errors &&
+    form.controls['name'].errors['maxlength']">User name should have maximum 8 characters</small>
+  </div>
+  </div>
+  <div>
+    <label>phone</label>
+    <input type="text" class="form-control" formControlName="phone">
+    <div *ngIf="form.controls['phone'].touched && form.controls['name'].invalid">
+      <small *ngIf="form.controls['phone'].errors &&
+      form.controls['phone'].errors['required']">Phone number  is requireds</small>
+    
+      <small *ngIf="form.controls['phone'].errors &&
+      form.controls['phone'].errors['pattern']">Wrong pattern</small>
+  
+     
+    </div>
+  </div>
+  <div>
+    <label>email</label>
+    <input type="text" class="form-control" formControlName="email">
+
+  </div>
+  <button (click)="signup()">Submit</button>
+</form>
